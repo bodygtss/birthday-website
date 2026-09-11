@@ -1,0 +1,860 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(
+        circle at center,
+        #F3E6D5 0%,
+        #D45060 70%
+    );
+    color: #6D0808;
+    font-family: "Playfair Display", serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   GENERAL PAGE
+========================= */
+
+.page {
+    min-height: 100vh;
+    width: 100%;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.page.active {
+    display: flex;
+}
+
+
+/* =========================
+   GIFT PAGE
+========================= */
+
+#giftPage {
+    background:
+        radial-gradient(
+            circle at center,
+            #F3E6D5 0%,
+            #D45060 70%
+        );
+}
+
+.gift-container {
+    cursor: pointer;
+
+    animation: floating 3s ease-in-out infinite;
+}
+
+.gift {
+    width: 250px;
+    max-width: 70vw;
+
+    display: block;
+
+    margin: 0 auto 30px;
+}
+
+.gift-container h1 {
+    font-family: "Caveat", cursive;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.gift-container p {
+    margin-top: 15px;
+
+    font-family: "san-serif", cursive;
+
+    font-size: 17px;
+
+    color: #000000;
+}
+
+
+/* =========================
+   LOVE PAGE
+========================= */
+
+.love-container {
+    max-width: 800px;
+}
+
+.love-container h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: 75px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.love-container h2 {
+    font-family: "Caveat", cursive;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+}
+
+.couple {
+    width: 400px;
+
+    max-width: 85vw;
+
+    display: block;
+
+    margin: auto;
+}
+
+.heart {
+    font-size: 40px;
+
+    margin: 20px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+button {
+    border: none;
+
+    cursor: pointer;
+
+    font-family: "Playfair Display", serif;
+}
+
+
+/* Continue button */
+
+.love-container button {
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    background: #D45060;
+
+    color: white;
+
+    font-size: 16px;
+
+    box-shadow: 0 8px 20px rgba(100, 30, 30, 0.2);
+
+    transition: 0.3s;
+}
+
+.love-container button:hover {
+    transform: translateY(-3px);
+
+    background: #D45060;
+}
+
+
+/* =========================
+   PASSCODE
+========================= */
+
+.passcode-container {
+    width: 350px;
+    max-width: 90vw;
+}
+
+.lock {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.passcode-container h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* dots */
+
+.dots {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.dots span {
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #F3E6D5;
+
+    transition: 0.2s;
+}
+
+.dots span.filled {
+    background: #a52731;
+
+    transform: scale(1.15);
+}
+
+.wrong {
+    height: 30px;
+
+    font-family: "Caveat", cursive;
+
+    color: #000000;
+
+    font-size: 25px;
+}
+
+
+/* keypad */
+
+.keypad {
+    margin-top: 15px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 80px);
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.keypad button {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: #fffaf5;
+
+    color: #31503d;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 4px 12px rgba(70, 30, 20, 0.1);
+
+    transition: 0.2s;
+}
+
+.keypad button:hover {
+    transform: scale(1.08);
+
+    background: #D45060;
+}
+
+.keypad button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.loading-container h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: 40px;
+
+    margin-top: 25px;
+}
+
+.loading-container p {
+    font-family: "Caveat", cursive;
+    margin-top: 15px;
+    font-size: 25px;
+    color: #000000;
+}
+
+.spinner {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    border: 5px solid #efd4cb;
+
+    border-top-color: #D45060;
+
+    animation: spin 1s linear infinite;
+
+    margin: auto;
+}
+
+
+/* =========================
+   PHOTOS
+========================= */
+
+#photosPage1 {
+    align-items: flex-start;
+
+    padding-top: 75px;
+
+    position: relative;
+}
+
+.photos-container {
+    width: 100%;
+
+    max-width: 1100px;
+}
+
+.photos-container h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: 70px;
+
+    margin-bottom: 5px;
+}
+
+.photos-container > p {
+
+    color: #000000;
+
+    margin-bottom: 40px;
+}
+
+
+/* gallery */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 35px;
+
+    align-items: center;
+}
+
+
+/* polaroid */
+
+.photo {
+    background: white;
+
+    padding: 12px 12px 35px;
+
+    box-shadow:
+        0 10px 25px rgba(70, 30, 20, 0.15);
+
+    transition: 0.4s;
+
+    transform: rotate(-2deg);
+}
+
+.photo:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-4deg);
+}
+
+.photo:nth-child(4) {
+    transform: rotate(2deg);
+}
+
+.photo:hover {
+    transform:
+        rotate(0deg)
+        scale(1.05);
+
+    z-index: 5;
+}
+
+.photo img {
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+}
+#photosPage2 {
+    align-items: flex-start;
+
+    padding-top: 75px;
+
+    position: relative;
+}
+
+.photos-container {
+    width: 100%;
+
+    max-width: 1100px;
+}
+
+.photos-container h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: 70px;
+
+    margin-bottom: 5px;
+}
+
+.photos-container > p {
+
+    color: #000000;
+
+    margin-bottom: 40px;
+}
+
+
+/* gallery */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 35px;
+
+    align-items: center;
+}
+
+
+/* polaroid */
+
+.photo {
+    background: white;
+
+    padding: 12px 12px 35px;
+
+    box-shadow:
+        0 10px 25px rgba(70, 30, 20, 0.15);
+
+    transition: 0.4s;
+
+    transform: rotate(-2deg);
+}
+
+.photo:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.photo:nth-child(3) {
+    transform: rotate(-4deg);
+}
+
+.photo:nth-child(4) {
+    transform: rotate(2deg);
+}
+
+.photo:hover {
+    transform:
+        rotate(0deg)
+        scale(1.05);
+
+    z-index: 5;
+}
+
+.photo img {
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* =========================
+   BACK / NEXT BUTTON
+========================= */
+
+.back-button {
+    position: fixed;
+
+    right: 25px;
+    top: 25px;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    background: #D45060;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 15px rgba(80, 40, 30, 0.15);
+
+    z-index: 20;
+}
+
+/* Position buttons on Photos Page 2 */
+#photosPage2 .back-button {
+    position: absolute ;
+    top: 25px ;
+    bottom: auto ;
+}
+
+/* Back button */
+#photosPage2 .back-button:first-of-type {
+    left: 25px ;
+    right: auto ;
+}
+
+/* Next button */
+#photosPage2 .back-button:last-of-type {
+    right: 25px ;
+    left: auto ;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+#letterPage {
+    align-items: flex-start;
+
+    padding-top: 60px;
+
+    padding-bottom: 100px;
+}
+
+.letter-container {
+    width: 100%;
+
+    max-width: 700px;
+}
+
+.letter-container h1 {
+    font-family: "Caveat", cursive;
+
+    font-size: 70px;
+
+    margin-bottom: 35px;
+}
+
+.letter {
+    text-align: left;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #fff9f5 0px,
+            #fff9f5 39px,
+            #eadbd4 40px
+        );
+
+    padding: 50px;
+
+    box-shadow:
+        0 15px 40px rgba(80, 40, 30, 0.15);
+
+    font-family: "Caveat", cursive;
+
+    font-size: 30px;
+
+    line-height: 36px;
+
+    color: #000000;
+}
+
+.letter p {
+    margin-bottom: 25px;
+}
+
+.signature {
+    text-align: right;
+font-family: "cursive";
+    color: #black;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .gift-container h1 {
+        font-size: 42px;
+    }
+
+    .love-container h1 {
+        font-size: 55px;
+    }
+
+    .love-container h2 {
+        font-size: 25px;
+    }
+
+    .couple {
+        width: 300px;
+    }
+
+    .photos-container h1 {
+        font-size: 50px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 30px;
+
+        font-size: 22px;
+
+        line-height: 34px;
+    }
+
+    .letter-container h1 {
+        font-size: 45px;
+    }
+
+}
+.age-number {
+    position: absolute;
+    width: 90px;
+    height: 140px;
+    object-fit: contain;
+    top: 65%;
+}
+
+/* رقم 2 على الشمال */
+.left-number {
+    left: calc(50% - 250px);
+    transform: translateY(-50%) ;
+}
+
+/* رقم 1 على اليمين */
+.right-number {
+    right: calc(50% - 250px);
+    transform: translateY(-50%) ;
+}
+
+.birthday-sticker {
+    position: absolute;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Top left */
+.sticker-top-left {
+  width: 230px;
+    top: -70px;
+    left: -200px;
+}
+
+/* Top right */
+.sticker-top-right {
+  width: 200px;
+    top: 0px;
+    right: -200px;
+}
+
+/* Bottom left */
+.sticker-bottom-left {
+  width: 230px;
+    bottom: -50px;
+    left: -200px;
+}
+
+/* Bottom right */
+.sticker-bottom-right {
+  width: 230px;
+    bottom: -50px;
+    right: -200px;
+}
+/* =========================
+   LOVE LETTER
+   ========================= */
+
+.letter {
+    width: min(85vw, 600px);
+    min-height: 650px;
+    margin: auto;
+    padding: 60px 45px;
+
+    background: #fffdf5;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+}
+
+.letter-content {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    line-height: 1.7;
+    color: #4a3434;
+}
+
+.letter-content h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+/* الكتابة حرف حرف */
+#loveLetterText {
+    white-space: pre-wrap;
+}
+
+/* مؤشر الكتابة */
+#loveLetterText::after {
+    content: "|";
+    animation: typingCursor 0.7s infinite;
+}
+
+@keyframes typingCursor {
+    0%, 50% {
+        opacity: 1;
+    }
+
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.restart-button {
+  display: block;
+  margin: 25px auto;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #D45060;
+  color: white;
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.restart-button:hover {
+  transform: scale(1.05);
+}
+/* Phone adjustment */
+@media (max-width: 600px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .gift {
+        width: 55vw;
+        max-width: 250px;
+    }
+
+    .gift-container h1 {
+        font-size: 42px;
+    }
+
+    .age-number {
+        width: 60px;
+        height: auto;
+    }
+
+    .left-number {
+        left: 5vw;
+    }
+
+    .right-number {
+        right: 5vw;
+    }
+
+    .birthday-sticker {
+        max-width: 30vw;
+    }
+
+    .keypad {
+        grid-template-columns: repeat(3, 65px);
+        gap: 10px;
+    }
+
+    .keypad button {
+        width: 65px;
+        height: 65px;
+    }
+
+    .letter {
+        width: 92vw;
+        min-height: 0;
+        padding: 30px 22px;
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+}

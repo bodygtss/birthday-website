@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You </title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Your external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PAGE 1 - GIFT
+    ========================== -->
+
+    <section id="giftPage" class="page active">
+
+      <div class="gift-container" onclick="openGift()">
+
+          <img src="images/p1.png" class="first-photo">
+          <div class="age-container">
+          <!-- NUMBER 2 IMAGE -->
+      <img src="images/2.png" class="age-number left-number">
+
+          <img src="images/gift.png" class="gift">
+
+          <h1>For you, my baby.</h1>
+
+          <p>(tap to open)</p>
+          <!-- NUMBER 1 IMAGE -->
+   <img src="images/1.png" class="age-number right-number">
+      <div>
+        <img src="images/cat.png" class="birthday-sticker sticker-top-left">
+
+        <img src="images/lily.png" class="birthday-sticker sticker-top-right">
+
+        <img src="images/silly.png" class="birthday-sticker sticker-bottom-left">
+
+        <img src="images/f5.png" class="birthday-sticker sticker-bottom-right">
+
+      </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         PAGE 2 - ROMANTIC MESSAGE
+    ========================== -->
+
+    <section id="lovePage" class="page">
+
+        <div class="love-container">
+            <h1>you mean the world to me baby</h1>
+
+            <img src="images/our wedding day.png" class="couple">
+
+            <div class="heart">♡</div>
+
+            <button onclick="showPasscode()">
+                Continue
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAGE 3 - PASSCODE
+    ========================== -->
+    <section id="passcodePage" class="page">
+
+      <div class="passcode-container">
+
+        <div class="lock"></div>
+
+        <h1>Enter Passkey</h1>
+
+        <div id="dots" class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p id="wrong" class="wrong"></p>
+
+
+        <div class="keypad">
+
+          <button onclick="pressNumber('1')">1</button>
+          <button onclick="pressNumber('2')">2</button>
+          <button onclick="pressNumber('3')">3</button>
+
+          <button onclick="pressNumber('4')">4</button>
+          <button onclick="pressNumber('5')">5</button>
+          <button onclick="pressNumber('6')">6</button>
+
+          <button onclick="pressNumber('7')">7</button>
+          <button onclick="pressNumber('8')">8</button>
+          <button onclick="pressNumber('9')">9</button>
+
+          <div></div>
+
+          <button onclick="pressNumber('0')">0</button>
+
+          <button onclick="clearCode()">Clear</button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+    PAGE 4 - LOADING
+    ========================== -->
+
+    <section id="loadingPage" class="page">
+
+      <div class="loading-container">
+
+        <div class="spinner"></div>
+
+        <h1>Preparing something special...</h1>
+
+        <p>Just for you </p>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         PAGE 5 - PHOTOS
+    ========================== -->
+
+    <section id="photosPage1" class="page">
+
+      <button class="back-button" onclick="showPage('photosPage2')">
+          Next
+      </button>
+
+        <div class="photos-container">
+
+            <h1>Our little world.</h1>
+            <div class="gallery">
+
+                <div class="photo">
+                    <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="photosPage2" class="page">
+
+      <button class="back-button" onclick="showPage('photosPage1')">
+     Back
+</button>
+
+<button class="back-button" onclick="showPage('letterPage')">
+    Next
+</button>
+
+        <div class="photos-container">
+
+            <h1>Our little world.</h1>
+
+            <div class="gallery">
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                      <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                      <img src="images/f1.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f2.png">
+                </div>
+
+                <div class="photo">
+                    <img src="images/f1.png">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAGE 6 - LETTER
+    ========================== -->
+
+    <section id="letterPage" class="page">
+      <button class="back-button" onclick="showPage('photosPage2')">
+           Back
+      </button>
+       <div class="letter">
+         <div class="letter-content">
+            <h2>To my baby </h2>
+            <p>
+                My love,
+            </p>
+            <p>
+                I don't think I'll ever find the perfect words
+                to explain how much you mean to me.
+                You make ordinary days feel special.
+                You make me smile without even trying.
+                And somehow, just having you beside me
+                makes everything feel a little better.
+                Thank you for every laugh, every conversation,
+                every hug, and every little moment we've shared.
+                I hope we keep making memories together,
+                taking silly pictures, laughing at stupid things,
+                and growing together.
+                You are incredibly special to me.
+                And if I had to choose again,
+                I'd still choose you.
+                I love you more than these words can explain.
+           </p>
+            <p class="signature">
+                Forever yours,Batman<br>
+                <button class="restart-button" onclick="watchFromBeginning()">
+                     replay again
+                </button>
+          </div>
+            </div>
+                </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
